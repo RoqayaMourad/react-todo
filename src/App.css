@@ -5,7 +5,6 @@
 }
 
 body {
-  /* background-image: url(./imgs/bg-dark.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,8 +19,21 @@ body {
 }
 header{
   font-size: 1.5rem;
-  color: rgb(117, 117, 117);
-  font-weight: 600;
+  color: rgb(17, 35, 20);
+  font-weight: 900;
+}
+h1 {
+  position:relative;
+}
+h1::after {
+  content: "";
+    width: 110%;
+    height: 21px;
+    background-color: #55af65;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
 }
 header, form {
   min-height: 20vh;
@@ -68,8 +80,9 @@ form button:focus {
   align-items: center;
 }
 .todo-list {
-  min-width:40%;
+  min-width:60%;
   list-style: none;
+  padding-left: 0rem;
 }
 
 .todo {
@@ -85,10 +98,9 @@ form button:focus {
 }
 .todo-item {
   flex: 1;
-  padding: 0rem 0.5rem;
+  padding: 0rem 1rem;
 }
 .trash-btn , .check-btn{
-  background: #55af65;
   color: #fff;
   border: none;
   padding: 1rem;
@@ -98,6 +110,9 @@ form button:focus {
 
 .check-btn {
 background-color:#e6e6e6;
+}
+.trash-btn {
+background-color:rgb(238, 77, 77);
 }
 button:focus {
   outline: none;
@@ -153,10 +168,6 @@ option {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
 }
-.select:hover::after {
-  background: #fff;
-  color: #55af65;
-}
 @media (max-width:790px) {
   body {
       background-position:right !important;  
@@ -173,6 +184,9 @@ option {
   }
   .select{
       margin-left: 0rem;
+  }
+  .container{
+    padding-top: 0px;
   }
 }
 @media (max-width:380px) {

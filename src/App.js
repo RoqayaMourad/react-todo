@@ -47,7 +47,7 @@ function App() {
   const saveLocalStorage = () => { 
       localStorage.setItem("todos",JSON.stringify(todos))
   }
-  
+
   const getLocalStorage = () => {
     if(localStorage.getItem("todos")=== null) {
       localStorage.setItem("todos" , JSON.stringify([]))
@@ -62,14 +62,14 @@ function App() {
     <div className="container">
       <div className="row">
 
-        <div className="col-6">
+        <div className="col-md-6 col-12">
           <header>
             <h1>Tasks List</h1>
           </header>
           <Form inputText={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText} setStatus={setStatus}/>
           <TodoList setTodos={setTodos} todos={todos}  filteredTodos={filteredTodos}  />
         </div>
-        <div className="col-6">
+        <div className="col-md-6 col-12">
         <img alt="tasks svg" src={tasks} className="img-fluid"/>
         </div>
       </div>

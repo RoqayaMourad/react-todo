@@ -19,7 +19,7 @@ function App() {
           <TodoList setTodos={setTodos} todos={todos} />
         </div>
         <div className="col-6">
-        <img src={tasks} className="img-fluid"/>
+        <img alt="tasks svg" src={tasks} className="img-fluid"/>
         </div>
       </div>
     </div>
